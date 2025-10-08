@@ -1,0 +1,78 @@
+Relacion Voltaje y Beta
+import matplotlib.pyplot as plt
+
+# Datos
+beta = [50, 100, 150, 200]
+voltaje_microvolts = [9.998, 4.992, 3.328, 2.496]
+
+# Crear la gráfica
+plt.figure(figsize=(8, 5))
+plt.plot(beta, voltaje_microvolts, marker='o', linestyle='-', color='green', label='Voltaje vs Beta')
+plt.title('Relación entre Voltaje y Beta del Transistor')
+plt.xlabel('Beta (β)')
+plt.ylabel('Voltaje (μV)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+
+
+Relacion Corriente y beta
+import matplotlib.pyplot as plt
+
+# Datos
+beta = [50, 100, 150, 200]
+corriente_mA = [2, 2, 2, 2]  # Corriente constante de 2 mA
+
+# Crear la gráfica
+plt.figure(figsize=(8, 5))
+plt.plot(beta, corriente_mA, marker='o', linestyle='-', color='red', label='Corriente vs Beta')
+plt.title('Relación entre Corriente y Beta del Transistor')
+plt.xlabel('Beta (β)')
+plt.ylabel('Corriente (mA)')
+plt.ylim(0, 3)  # Escala ajustada para mejor visualización
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+
+
+Relacion Corriente vs Voltaje de la fuente
+import matplotlib.pyplot as plt
+
+# Datos
+voltaje_fuente = [10, 15, 20, 25]  # en voltios
+corriente_mA = [0.909, 1.364, 1.818, 2.273]  # en miliamperios
+
+# Crear la gráfica
+plt.figure(figsize=(8, 5))
+plt.plot(voltaje_fuente, corriente_mA, marker='o', linestyle='-', color='purple', label='Corriente vs Voltaje de la Fuente')
+plt.title('Corriente vs Voltaje de la Fuente')
+plt.xlabel('Voltaje de la Fuente (V)')
+plt.ylabel('Corriente (mA)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+
+
+Relacion Voltaje en una seccion vs Voltaje de la fuente
+import matplotlib.pyplot as plt
+
+# Datos
+vcc = [10, 15, 20, 25]  # Voltaje de la fuente en V
+voltaje_seccion = [1.136, 1.703, 2.269, 2.836]  # Voltaje en la sección en microvoltios
+
+# Crear la gráfica
+plt.figure(figsize=(8, 5))
+plt.plot(vcc, voltaje_seccion, marker='o', linestyle='-', color='orange', label='Voltaje de Sección vs VCC')
+plt.title('Voltaje en una Sección vs Voltaje de la Fuente')
+plt.xlabel('Voltaje de la Fuente (V)')
+plt.ylabel('Voltaje en la Sección (μV)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
